@@ -1,0 +1,25 @@
+{
+    "name": "selinux-highlighting",
+    "displayName": "SELinux Highlighting",
+    "description": "This will end world SELinux understanding hunger",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "selinux",
+            "aliases": ["SELinux", "selinux"],
+            "extensions": [".te",".if",".fc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "selinux",
+            "scopeName": "source",
+            "path": "./syntaxes/selinux.tmLanguage.json"
+        }]
+    }
+}

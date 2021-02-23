@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SELinux",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#attribute"
+		},
+		{
+			"include": "#access_content"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "comment.block.selinux",
+			"begin": "\\#",
+			"end": "(\n)",
+			"patterns": [
+				{
+					"name": "punctuation.definition.comment.selinux",
+					"match": "\\\\#."
+				}
+			]
+		},
+		"keywords":{
+			"name": "keyword.control.selinux",
+			"patterns": [
+				{
+					"name": "keyword.control.selinux",
+					"match": "\\b(allow|type|type_transition|role|attribute|dontaudit|auditallow|alias|user|role_transition|neverallow|require)\\b"
+				}
+			]			
+		},
+		"attribute":{
+			"name": "attribute.quoted.double.selinux",
+			"patterns": [
+				{
+					"name": "constant.character.escape.selinux",
+					"match": "\\b(file_type|sysadmfile|domain|daemon)\\b"
+				}
+			]			
+		},		
+		"access_content":{
+			"name": "access_content.quoted.double.selinux",
+			"patterns": [
+				{
+					"name": "constant.character.escape.selinux",
+					"match": "\\b(file|dir|capability|chr_file)\\b."
+				}
+			]			
+		},		
+		"optional_content":{
+			"name": "access_content.quoted.double.selinux",
+			"patterns": [
+				{
+					"name": "constant.character.escape.selinux",
+					"match": "\\b(optional_policy)\\b"
+				}
+			]			
+		}
+	},
+	"scopeName": "source"
+}
