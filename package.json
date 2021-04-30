@@ -13,7 +13,7 @@
         "languages": [{
             "id": "selinux",
             "aliases": ["SELinux", "selinux"],
-            "extensions": [".te",".if",".fc"],
+            "extensions": [".te",".te.in",".if",".if.in",".fc",".fc.in"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{

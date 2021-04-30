@@ -35,7 +35,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.selinux",
-					"match": "\\b(allow|type|type_transition|role|attribute|dontaudit|auditallow|alias|user|role_transition|neverallow|require)\\b"
+					"match": "\\b(allow|type|type_transition|role|attribute|typealias|permissive|type_change|type_member|dontaudit|auditallow|alias|user|role_transition|neverallow|require)\\b"
 				}
 			]			
 		},
@@ -53,7 +53,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.selinux",
-					"match": "\\b(file|dir|capability|chr_file)\\b."
+					"match": "\\b(file|dir|capability|chr_file|blk_file|capability|fd|fifo_file|filesystem|ipc|kernel_service|key|key_socket|lnk_file|memprotect|msg|msgq|netif|netlink_socket|netlink_audit_socket|netlink_dnrt_socket|netlink_firewall_socket|netlink_ip6fw_socket|netlink_kobject_uevent_socket|node|packet|packet_socket|peer|process|rawip_socket|security|sem|shm|sock_file|socket|system|tcp_socket|tun_socket|udp_socket|unix_dgram_socket|unix_stream_socket)\\b."
 				}
 			]			
 		},		
